@@ -209,7 +209,7 @@ insert into rol values ('Supervisor','Activo');
 insert into rol values ('Cajero','Activo');
 insert into rol values ('Vendedor','Activo');
 insert into rol values ('Guia','Activo');
-
+select * from ROL
 insert into usuario values (1, 'pedrof', '6841', '2022-02-01 14:00:00');
 insert into usuario values (2, 'adrianp', '2847', '2022-02-23 13:50:00');
 insert into usuario values (3, 'beleng', '9189', '2022-03-15 09:20:00');
