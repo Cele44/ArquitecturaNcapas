@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using sistemaVentas.Modelos;
 namespace sistemaVentas.DAL
 {
    public class PersonaDal
@@ -15,7 +15,16 @@ namespace sistemaVentas.DAL
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
-
+        public void InsertarPersonaDal(Persona persona)
+        {
+            string consulta = "insert into persona values('" + persona.Nombre + "' ," +
+                                                           "'" + persona.Apellido + "'," +
+                                                           "'" + persona.Telefono + "'," +
+                                                           "'" + persona.Ci + "'," +
+                                                           "'" + persona.Correo + "'," +
+                                                           "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
 
    }
 }

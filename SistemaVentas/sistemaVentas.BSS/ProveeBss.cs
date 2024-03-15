@@ -1,4 +1,5 @@
 ﻿using sistemaVentas.DAL;
+using sistemaVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,10 @@ namespace sistemaVentas.BSS
         public DataTable ListarProveeBss()
         {
             return dal.ListarProveeDal();
+        }
+        public void InsertarProveeBss(Provee provee)
+        {
+            dal.InsertarProveeDal(provee);
         }
     }
 }
