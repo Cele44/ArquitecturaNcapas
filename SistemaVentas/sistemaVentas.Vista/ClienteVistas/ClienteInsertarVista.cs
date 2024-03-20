@@ -1,5 +1,6 @@
 ﻿using sistemaVentas.BSS;
 using sistemaVentas.Modelos;
+using sistemaVentas.Vista.PersonaVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace sistemaVentas.Vista.ClienteVistas
         {
             InitializeComponent();
         }
-        ClienteBss bss = new ClienteBss();
+        /*ClienteBss bss = new ClienteBss();
         private void button1_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
@@ -29,6 +30,29 @@ namespace sistemaVentas.Vista.ClienteVistas
             bss.InsertarClienteBss(c);
 
             MessageBox.Show("Se guardo correctamente el cliente");
+        }*/
+        public static int IdPersonaSeleccionada = 0;
+        PersonaBss bss = new PersonaBss();
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PersonaListarVista fr = new PersonaListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Persona persona = bss.ObtenerIdBss(IdPersonaSeleccionada);
+                textBox1.Text = persona.Nombre + " " + persona.Apellido;
+            }
+
+        }
+        ClienteBss bsscli = new ClienteBss();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            cliente.IdPersona = IdPersonaSeleccionada;
+            cliente.TipoCliente = textBox2.Text;
+            cliente.CodigoCliente = textBox3.Text;
+            bsscli.InsertarClienteBss(cliente);
+            MessageBox.Show("Cliente registrado");
         }
     }
 }

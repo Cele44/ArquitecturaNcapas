@@ -25,9 +25,15 @@ namespace sistemaVentas.Vista.MarcaVistas
         {
             Marca m = new Marca();
             m.Nombre = textBox1.Text;
+            m.Estado = textBox2.Text;
             bss.InsertarMarcaBss(m);
             MessageBox.Show("Se guardo correctamente la marca");
-            
+
+        }
+
+        private void MarcaInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

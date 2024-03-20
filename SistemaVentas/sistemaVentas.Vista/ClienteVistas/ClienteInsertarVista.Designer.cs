@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -36,17 +35,9 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
+            button3 = new Button();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(134, 256);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "GUARDAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -62,9 +53,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(49, 77);
             label1.Name = "label1";
-            label1.Size = new Size(89, 20);
+            label1.Size = new Size(74, 20);
             label1.TabIndex = 2;
-            label1.Text = "IDPERSONA";
+            label1.Text = "PERSONA";
             // 
             // label2
             // 
@@ -86,7 +77,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(177, 77);
+            textBox1.Location = new Point(134, 74);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(316, 27);
             textBox1.TabIndex = 5;
@@ -105,11 +96,33 @@
             textBox3.Size = new Size(316, 27);
             textBox3.TabIndex = 7;
             // 
+            // button3
+            // 
+            button3.Location = new Point(479, 74);
+            button3.Name = "button3";
+            button3.Size = new Size(115, 29);
+            button3.TabIndex = 8;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(145, 256);
+            button1.Name = "button1";
+            button1.Size = new Size(122, 29);
+            button1.TabIndex = 11;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // ClienteInsertarVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(541, 360);
+            ClientSize = new Size(606, 315);
+            Controls.Add(button1);
+            Controls.Add(button3);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -117,7 +130,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button2);
-            Controls.Add(button1);
             Name = "ClienteInsertarVista";
             Text = "ClienteInsertarVista";
             ResumeLayout(false);
@@ -125,8 +137,6 @@
         }
 
         #endregion
-
-        private Button button1;
         private Button button2;
         private Label label1;
         private Label label2;
@@ -134,5 +144,7 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private Button button3;
+        private Button button1;
     }
 }

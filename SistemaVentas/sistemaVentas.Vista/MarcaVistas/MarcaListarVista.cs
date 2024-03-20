@@ -1,4 +1,5 @@
 ﻿using sistemaVentas.BSS;
+using sistemaVentas.Vista.PersonaVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,44 @@ namespace sistemaVentas.Vista.MarcaVistas
         private void MarcaListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarMarcaBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //UsuarioInsertarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MarcaInsertarVista fr = new MarcaInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarMarcaBss();
+
+                // Refrescar la vista del DataGridView OPCIONAL-----
+                dataGridView1.Refresh();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdMarcaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            MarcaEditarVista fr = new MarcaEditarVista(IdMarcaSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarMarcaBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdMarcaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("Esta seguro de eliminar esta marca", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarMarcaBss(IdMarcaSeleccionada);
+                dataGridView1.DataSource = bss.ListarMarcaBss();
+            }
         }
     }
 }

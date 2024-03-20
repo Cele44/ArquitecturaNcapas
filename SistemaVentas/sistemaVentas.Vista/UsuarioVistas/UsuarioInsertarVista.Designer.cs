@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -38,17 +37,9 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             button2 = new Button();
+            button3 = new Button();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(142, 328);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "GUARDAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -82,9 +73,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(59, 74);
             label4.Name = "label4";
-            label4.Size = new Size(89, 20);
+            label4.Size = new Size(74, 20);
             label4.TabIndex = 4;
-            label4.Text = "IDPERSONA";
+            label4.Text = "PERSONA";
             // 
             // dateTimePicker1
             // 
@@ -96,7 +87,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(179, 74);
+            textBox1.Location = new Point(177, 74);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(325, 27);
             textBox1.TabIndex = 6;
@@ -112,23 +103,49 @@
             // 
             textBox3.Location = new Point(179, 192);
             textBox3.Name = "textBox3";
+            textBox3.PasswordChar = '*';
             textBox3.Size = new Size(325, 27);
             textBox3.TabIndex = 8;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // button2
             // 
-            button2.Location = new Point(310, 328);
+            button2.Location = new Point(393, 328);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 9;
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            button3.Location = new Point(508, 73);
+            button3.Name = "button3";
+            button3.Size = new Size(122, 29);
+            button3.TabIndex = 10;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button1
+            // 
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(142, 328);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 11;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // UsuarioInsertarVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(610, 405);
+            BackColor = SystemColors.ButtonFace;
+            ClientSize = new Size(660, 386);
+            Controls.Add(button1);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -138,7 +155,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button1);
             Name = "UsuarioInsertarVista";
             Text = "UsuarioInsertarVista";
             ResumeLayout(false);
@@ -147,7 +163,7 @@
 
         #endregion
 
-        private Button button1;
+
         private Label label1;
         private Label label2;
         private Label label3;
@@ -157,5 +173,7 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private Button button2;
+        private Button button3;
+        private Button button1;
     }
 }

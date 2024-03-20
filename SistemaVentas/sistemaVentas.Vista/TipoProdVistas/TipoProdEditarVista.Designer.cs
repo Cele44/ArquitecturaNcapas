@@ -1,6 +1,6 @@
-﻿namespace sistemaVentas.Vista.RolVistas
+﻿namespace sistemaVentas.Vista.TipoProdVistas
 {
-    partial class RolInsertarVista
+    partial class TipoProdEditarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,91 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             button2 = new Button();
-            label1 = new Label();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(78, 211);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "GUARDAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(220, 211);
+            button2.Location = new Point(251, 161);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
-            button2.TabIndex = 1;
+            button2.TabIndex = 11;
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(28, 86);
-            label1.Name = "label1";
-            label1.Size = new Size(70, 20);
-            label1.TabIndex = 2;
-            label1.Text = "NOMBRE";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(134, 83);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(207, 27);
-            textBox1.TabIndex = 3;
-            // 
             // textBox2
             // 
-            textBox2.Location = new Point(134, 138);
+            textBox2.Location = new Point(115, 98);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(207, 27);
-            textBox2.TabIndex = 5;
+            textBox2.Size = new Size(253, 27);
+            textBox2.TabIndex = 10;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 141);
+            label2.Location = new Point(39, 98);
             label2.Name = "label2";
             label2.Size = new Size(64, 20);
-            label2.TabIndex = 4;
+            label2.TabIndex = 9;
             label2.Text = "ESTADO";
             // 
-            // RolInsertarVista
+            // textBox1
+            // 
+            textBox1.Location = new Point(115, 38);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(253, 27);
+            textBox1.TabIndex = 8;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(33, 45);
+            label1.Name = "label1";
+            label1.Size = new Size(70, 20);
+            label1.TabIndex = 7;
+            label1.Text = "NOMBRE";
+            // 
+            // button1
+            // 
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(83, 161);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 6;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // TipoProdEditarVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(449, 262);
+            ClientSize = new Size(436, 217);
+            Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(button2);
             Controls.Add(button1);
-            Name = "RolInsertarVista";
-            Text = "RolInsertarVista";
+            Name = "TipoProdEditarVista";
+            Text = "TipoProdEditarVista";
+            Load += TipoProdEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
         private Button button2;
-        private Label label1;
-        private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
+        private TextBox textBox1;
+        private Label label1;
+        private Button button1;
     }
 }

@@ -24,5 +24,35 @@ namespace sistemaVentas.DAL
                                                            "'Activo')";
             conexion.Ejecutar(consulta);
         }
+        public Proveedor ObtenerProveedorId(int id)
+        {
+            string consulta = "select * from proveedor where idproveedor=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            Proveedor pr = new Proveedor();
+            if (tabla.Rows.Count > 0)
+            {
+                pr.IdProveedor = Convert.ToInt32(tabla.Rows[0]["idproveedor"]);
+                pr.Nombre = tabla.Rows[0]["nombre"].ToString();
+                pr.Telefono = tabla.Rows[0]["telefono"].ToString();
+                pr.Direccion = tabla.Rows[0]["direccion"].ToString();
+                pr.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return pr;
+
+        }
+        public void EditarProveedorDal(Proveedor pr)
+        {
+            string consulta = "update proveedor set nombre='" + pr.Nombre + "'," +
+                                                  "telefono='" + pr.Telefono + "'," +
+                                                   "direccion='" + pr.Direccion + "' " +
+                                "where idproveedor=" + pr.IdProveedor;
+            conexion.Ejecutar(consulta);
+
+        }
+        public void EliminarProveedorDal(int id)
+        {
+            string consulta = "delete from proveedor where idproveedor=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

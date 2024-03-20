@@ -24,6 +24,7 @@ namespace sistemaVentas.Vista.RolVistas
         {
             Rol r = new Rol();
             r.Nombre = textBox1.Text;
+            r.Estado = textBox2.Text;
             bss.InsertarRolBss(r);
             MessageBox.Show("Se guardo correctamente el rol");
         }

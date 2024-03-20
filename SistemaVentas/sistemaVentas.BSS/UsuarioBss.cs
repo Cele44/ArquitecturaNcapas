@@ -11,6 +11,7 @@ namespace sistemaVentas.BSS
 {
     public class UsuarioBss
     {
+        public UsuarioBss() { }
         UsuarioDal dal = new UsuarioDal();
         public DataTable ListarUsuarioBss()
         {
