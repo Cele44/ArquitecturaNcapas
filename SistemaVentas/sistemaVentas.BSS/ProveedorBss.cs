@@ -20,7 +20,7 @@ namespace sistemaVentas.BSS
         {
             dal.InsertarProveedorDal(proveedor);
         }
-        public Proveedor ObtenerIdBss(int id)
+       public Proveedor ObtenerIdBss(int id)
         {
             return dal.ObtenerProveedorId(id);
         }

@@ -11,8 +11,19 @@ namespace sistemaVentas.Vista
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-         
-           /* Application.Run(new PersonaVistas.PersonaInsertarVista());
+            Application.Run(new UsuarioRolVistas.UsuarioDatosVista());
+            Application.Run(new ClienteVistas.ClienteDatosVista());
+            Application.Run(new ProductoVistas.ProductoDatosVista());
+            /*Application.Run(new PSesion.InSesion());
+            Application.Run(new PNuevo.UserNuevo());
+            Application.Run(new PMenu.MenuPrincipal());
+            Application.Run(new PUser.UserGeneral());
+            Application.Run(new PVenta.VentaCompleta());
+            Application.Run(new PProducto.ProLista());
+            Application.Run(new PProveedor.ProveeLi());*/
+
+
+            /*Application.Run(new PersonaVistas.PersonaInsertarVista());
             Application.Run(new ClienteVistas.ClienteInsertarVista());
             Application.Run(new RolVistas.RolInsertarVista());
             Application.Run(new TipoProdVistas.TipoProdInsertarVista());
@@ -26,15 +37,14 @@ namespace sistemaVentas.Vista
             Application.Run(new DetalleVentaVistas.DetalleVentaInsertarVista());
             Application.Run(new DetalleingVistas.DetalleingInsertarVista());
             /*listar*/
-            //Application.Run(new PersonaVistas.PersonaListarVista());
-             Application.Run(new RolVistas.RolListarVista());
-             Application.Run(new TipoProdVistas.TipoProdListarVista());
+            /*Application.Run(new PersonaVistas.PersonaListarVista());
+            Application.Run(new ProveedorVistas.ProveedorListarVista());
+            Application.Run(new RolVistas.RolListarVista());
+            Application.Run(new TipoProdVistas.TipoProdListarVista());
             Application.Run(new UsuarioVistas.UsuarioInsertarVista());
             Application.Run(new UsuarioVistas.UsuarioListarVista());
             Application.Run(new MarcaVistas.MarcaListarVista());
-             Application.Run(new ProveedorVistas.ProveedorListarVista());
-            
-             /*Application.Run(new UsuarioRolVistas.UsuarioRolListarVista());
+            Application.Run(new UsuarioRolVistas.UsuarioRolListarVista());
              Application.Run(new ClienteVistas.ClienteListarVista());
              Application.Run(new IngresoVistas.IngresoListarVista());
              Application.Run(new VentaVistas.VentaListarVista());

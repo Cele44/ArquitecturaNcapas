@@ -1,6 +1,6 @@
-﻿namespace sistemaVentas.Vista.ClienteVistas
+﻿namespace sistemaVentas.Vista.UsuarioRolVistas
 {
-    partial class ClienteListarVista
+    partial class UsuarioDatosVista
     {
         /// <summary>
         /// Required designer variable.
@@ -34,27 +34,26 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(724, 471);
+            dataGridView1.Size = new Size(776, 379);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // ClienteListarVista
+            // UsuarioDatosVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(747, 495);
+            BackColor = Color.White;
+            ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
-            Name = "ClienteListarVista";
-            Text = "ClienteListarVista";
-            Load += ClienteListarVista_Load;
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Name = "UsuarioDatosVista";
+            Text = "UsuarioDatosVista";
+            Load += UsuarioDatosVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

@@ -1,6 +1,6 @@
-﻿namespace sistemaVentas.Vista.ClienteVistas
+﻿namespace sistemaVentas.Vista.ProductoVistas
 {
-    partial class ClienteListarVista
+    partial class ProductoDatosVista
     {
         /// <summary>
         /// Required designer variable.
@@ -34,27 +34,23 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(22, 31);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(724, 471);
+            dataGridView1.Size = new Size(746, 304);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // ClienteListarVista
+            // ProductoDatosVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(747, 495);
+            ClientSize = new Size(800, 373);
             Controls.Add(dataGridView1);
-            Name = "ClienteListarVista";
-            Text = "ClienteListarVista";
-            Load += ClienteListarVista_Load;
+            Name = "ProductoDatosVista";
+            Text = "ProductoDatosVista";
+            Load += ProductoDatosVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

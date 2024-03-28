@@ -20,5 +20,9 @@ namespace sistemaVentas.BSS
         {
             dal.InsertarUsuarioRolDal(usuariorol);
         }
+        public DataTable UsuarioDatosBss()
+        {
+            return dal.UsuarioDatosDal();
+        }
     }
 }

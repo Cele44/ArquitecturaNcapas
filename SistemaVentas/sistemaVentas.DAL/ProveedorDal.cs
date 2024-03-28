@@ -21,7 +21,8 @@ namespace sistemaVentas.DAL
             string consulta = "insert into proveedor values('" + proveedor.Nombre + "' ," +
                                                            "'" + proveedor.Telefono + "'," +
                                                            "'" + proveedor.Direccion + "'," +
-                                                           "'Activo')";
+                                                           "'" + proveedor.Estado + "')";
+                                                           
             conexion.Ejecutar(consulta);
         }
         public Proveedor ObtenerProveedorId(int id)

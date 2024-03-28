@@ -44,7 +44,7 @@ namespace sistemaVentas.Vista.UsuarioVistas
                 textBox1.Text = persona.Nombre + " " + persona.Apellido;
             }
         }
-
+        
         UsuarioBss bssuser = new UsuarioBss();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,38 @@ namespace sistemaVentas.Vista.UsuarioVistas
 
         }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
 

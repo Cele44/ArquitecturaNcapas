@@ -11,21 +11,17 @@ using System.Windows.Forms;
 
 namespace sistemaVentas.Vista.ClienteVistas
 {
-    public partial class ClienteListarVista : Form
+    public partial class ClienteDatosVista : Form
     {
-        public ClienteListarVista()
+        public ClienteDatosVista()
         {
             InitializeComponent();
         }
         ClienteBss bss = new ClienteBss();
-        private void ClienteListarVista_Load(object sender, EventArgs e)
+        private void ClienteDatosVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarClienteBss();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dataGridView1.DataSource = bss.ClienteDatosBss();
         }
     }
 }
+
