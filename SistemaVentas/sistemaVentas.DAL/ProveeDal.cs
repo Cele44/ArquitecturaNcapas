@@ -27,5 +27,14 @@ namespace sistemaVentas.DAL
             conexion.Ejecutar(consulta);
         }
 
+        public DataTable ProveeDatosDal()
+        {
+            string consulta = "SELECT PRODUCTO.IDPRODUCTO, PRODUCTO.NOMBRE AS NOMBREPRODUCTO, PROVEEDOR.NOMBRE AS NOMBREPROVEEDOR, PROVEE.FECHA, PROVEE.PRECIO " +
+                "FROM PROVEE INNER JOIN " +
+                "PRODUCTO ON PROVEE.IDPRODUCTO = PRODUCTO.IDPRODUCTO " +
+                "INNER JOIN PROVEEDOR ON PROVEE.IDPROVEEDOR = PROVEEDOR.IDPROVEEDOR";
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
+
     }
 }

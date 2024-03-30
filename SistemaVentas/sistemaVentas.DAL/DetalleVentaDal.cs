@@ -28,7 +28,17 @@ namespace sistemaVentas.DAL
 
             conexion.Ejecutar(consulta);
         }
-
+        public DataTable VentaDetalleDatosDal()
+        {
+            string consulta = "SELECT DV.IDVENTA,C.NOMBRE AS NOMBRE_CLIENTE,P.NOMBRE AS NOMBREPRODUCTO,DV.CANTIDAD,DV.PRECIOVENTA,DV.SUBTOTAL,V.ESTADO " +
+           "FROM DETALLEVENTA DV " +
+           "INNER JOIN VENTA V ON DV.IDVENTA = V.IDVENTA " +
+           "INNER JOIN CLIENTE CL ON V.IDCLIENTE = CL.IDCLIENTE " +
+           "INNER JOIN PRODUCTO P ON DV.IDPRODUCTO = P.IDPRODUCTO " +
+           "INNER JOIN PERSONA C ON CL.IDPERSONA = C.IDPERSONA";
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
+       
 
     }
 }

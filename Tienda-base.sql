@@ -229,7 +229,7 @@ insert into usuario values (16, 'mariar', '4221', '2023-05-01 14:30:00');
 insert into usuario values (17, 'nicolasf', '1629', '2023-06-10 16:09:00');
 insert into usuario values (18, 'oliviar', '8219', '2023-07-12 13:10:00');
 insert into usuario values (19, 'pabloo', '1520', '2023-08-12 15:06:00');
-insert into usuario values (20, 'emmaa', '7538', '2023-08-20 12:50:00');
+insert into usuario values (20, 'emmaa', '7538',CONVERT(datetime, '2023-09-20 12:40:30', 120));--sirve paar q no haya problemas con la fecha
 
 select * from USUARIO 
 

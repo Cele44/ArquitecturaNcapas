@@ -14,6 +14,11 @@ namespace sistemaVentas.Vista
             Application.Run(new UsuarioRolVistas.UsuarioDatosVista());
             Application.Run(new ClienteVistas.ClienteDatosVista());
             Application.Run(new ProductoVistas.ProductoDatosVista());
+            Application.Run(new ProveeVistas.ProveeDatosVista());
+            Application.Run(new IngresoVistas.IngresoDatosVista());
+            Application.Run(new VentaVistas.VentaDatosVista());
+            Application.Run(new DetalleVentaVistas.DetalleVentaDatosVista());
+            Application.Run(new DetalleingVistas.DetallingDatosVista());
             /*Application.Run(new PSesion.InSesion());
             Application.Run(new PNuevo.UserNuevo());
             Application.Run(new PMenu.MenuPrincipal());

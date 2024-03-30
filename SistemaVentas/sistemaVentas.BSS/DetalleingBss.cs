@@ -20,5 +20,9 @@ namespace sistemaVentas.BSS
         {
             dal.InsertarDetalleingDal(detalleing);
         }
+        public DataTable DetallingDatosBss()
+        {
+            return dal.DetallingDatosDal();
+        }
     }
 }

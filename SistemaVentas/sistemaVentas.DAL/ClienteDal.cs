@@ -27,7 +27,7 @@ namespace sistemaVentas.DAL
         }
         public DataTable ClienteDatosDal()
         {
-            string consulta = "SELECT PERSONA.IDPERSONA, (PERSONA.NOMBRE+' '+PERSONA.APELLIDO)AS NOMBRECOMPLETO," +
+            string consulta = "SELECT CLIENTE.IDCLIENTE, (PERSONA.NOMBRE+' '+PERSONA.APELLIDO)AS NOMBRECOMPLETO," +
                 "CLIENTE.TIPOCLIENTE, CLIENTE.CODIGOCLIENTE, CLIENTE.ESTADO " +
                 "FROM CLIENTE " +
                 "INNER JOIN PERSONA ON CLIENTE.IDPERSONA = PERSONA.IDPERSONA";

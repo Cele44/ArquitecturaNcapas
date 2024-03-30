@@ -29,5 +29,18 @@ namespace sistemaVentas.DAL
 
             conexion.Ejecutar(consulta);
         }
+        public DataTable DetallingDatosDal()
+        {
+            string consulta = "SELECT P.NOMBRE AS NombreProducto,DI.FECHAVENC,DI.CANTIDAD,DI.PRECIOCOSTO,DI.PRECIOVENTA," +
+            "DI.SUBTOTAL*CANTIDAD AS SUBTOTAL,DI.ESTADO " +
+            "FROM DETALLEING DI " +
+            "INNER JOIN INGRESO I ON DI.IDINGRESO = I.IDINGRESO " +
+            "INNER JOIN PRODUCTO P ON DI.IDPRODUCTO = P.IDPRODUCTO " +
+            "INNER JOIN PROVEEDOR PR ON I.IDPROVEEDOR = PR.IDPROVEEDOR";
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+
+        }
+        
+
     }
 }

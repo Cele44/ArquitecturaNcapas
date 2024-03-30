@@ -1,6 +1,6 @@
-﻿namespace sistemaVentas.Vista.ProductoVistas
+﻿namespace sistemaVentas.Vista.DetalleingVistas
 {
-    partial class ProductoDatosVista
+    partial class DetallingDatosVista
     {
         /// <summary>
         /// Required designer variable.
@@ -36,23 +36,22 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(33, 34);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1066, 428);
+            dataGridView1.Size = new Size(945, 497);
             dataGridView1.TabIndex = 0;
             // 
-            // ProductoDatosVista
+            // DetallingDatosVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1104, 463);
+            ClientSize = new Size(1029, 562);
             Controls.Add(dataGridView1);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "ProductoDatosVista";
-            Text = "ProductoDatosVista";
-            Load += ProductoDatosVista_Load;
+            Name = "DetallingDatosVista";
+            Text = "DetallingDatosVista";
+            Load += DetallingDatosVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
