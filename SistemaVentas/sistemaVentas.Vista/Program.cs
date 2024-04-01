@@ -11,21 +11,23 @@ namespace sistemaVentas.Vista
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new UsuarioRolVistas.UsuarioDatosVista());
-            Application.Run(new ClienteVistas.ClienteDatosVista());
-            Application.Run(new ProductoVistas.ProductoDatosVista());
-            Application.Run(new ProveeVistas.ProveeDatosVista());
-            Application.Run(new IngresoVistas.IngresoDatosVista());
-            Application.Run(new VentaVistas.VentaDatosVista());
-            Application.Run(new DetalleVentaVistas.DetalleVentaDatosVista());
-            Application.Run(new DetalleingVistas.DetallingDatosVista());
-            /*Application.Run(new PSesion.InSesion());
-            Application.Run(new PNuevo.UserNuevo());
-            Application.Run(new PMenu.MenuPrincipal());
-            Application.Run(new PUser.UserGeneral());
-            Application.Run(new PVenta.VentaCompleta());
-            Application.Run(new PProducto.ProLista());
-            Application.Run(new PProveedor.ProveeLi());*/
+            Application.Run(new Examen2ClienteVistas.ExaClienteVista());
+            Application.Run(new ExamenProveedorVista.ExaProveedorVista());
+            Application.Run(new Examen2MarcaVistas.ExaMarcaVista());
+            Application.Run(new Examen2ProductoCanVistas.ExaProductoCanVista());
+            Application.Run(new Examen2ProductoVistas.ExaProductoVista());
+            Application.Run(new Examen2VendedorVistas.ExaUsuarioVista());
+            Application.Run(new Examen2ClieIngresosVistas.ExaClieIngresoVista());
+
+            /* Application.Run(new UsuarioRolVistas.UsuarioDatosVista());
+             Application.Run(new ClienteVistas.ClienteDatosVista());
+             Application.Run(new ProductoVistas.ProductoDatosVista());
+             Application.Run(new ProveeVistas.ProveeDatosVista());
+             Application.Run(new IngresoVistas.IngresoDatosVista());
+             Application.Run(new VentaVistas.VentaDatosVista());
+             Application.Run(new DetalleVentaVistas.DetalleVentaDatosVista());
+             Application.Run(new DetalleingVistas.DetallingDatosVista());*/
+
 
 
             /*Application.Run(new PersonaVistas.PersonaInsertarVista());

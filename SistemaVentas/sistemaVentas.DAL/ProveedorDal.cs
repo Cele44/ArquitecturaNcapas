@@ -55,5 +55,16 @@ namespace sistemaVentas.DAL
             string consulta = "delete from proveedor where idproveedor=" + id;
             conexion.Ejecutar(consulta);
         }
+
+
+        //examen
+        public DataTable ProveedorExamenDal()
+        {
+            string consulta = "SELECT PROVEEDOR.NOMBRE, SUM(INGRESO.TOTAL) AS TOTALINGRESOS " +
+                "FROM INGRESO INGRESO " +
+                "INNER JOIN PROVEEDOR ON INGRESO.IDPROVEEDOR = PROVEEDOR.IDPROVEEDOR " +
+                "GROUP BY PROVEEDOR.NOMBRE";
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
     }
 }

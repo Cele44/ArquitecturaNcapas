@@ -39,5 +39,23 @@ namespace sistemaVentas.DAL
             
             return conexion.EjecutarDataTabla(consulta, "ffff");
         }
+
+        public DataTable ProductoExamenDal()
+        {
+            string consulta = "SELECT PRODUCTO.NOMBRE AS NOMBREPRODUCTO, PRODUCTO.CODIGOBARRA , DETALLEING .FECHAVENC " +
+                "FROM DETALLEING " +
+                "INNER JOIN PRODUCTO ON DETALLEING .IDPRODUCTO = PRODUCTO.IDPRODUCTO " +
+                "WHERE DETALLEING.FECHAVENC BETWEEN GETDATE() AND DATEADD(DAY, 30, GETDATE())";
+
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
+
+        public DataTable ProductoCanExamenDal()
+        {
+            string consulta = "SELECT SUM(UNIDAD) AS CANTIDADTOTALPRODUCTOS " +
+                "FROM PRODUCTO";
+
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
     }
 }

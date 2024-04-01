@@ -24,5 +24,13 @@ namespace sistemaVentas.BSS
         {
             return dal.ProductoDatosDal();
         }
+        public DataTable ProductoExamenBss()
+        {
+            return dal.ProductoExamenDal();
+        }
+        public DataTable ProductoCanExamenBss()
+        {
+            return dal.ProductoCanExamenDal();
+        }
     }
 }

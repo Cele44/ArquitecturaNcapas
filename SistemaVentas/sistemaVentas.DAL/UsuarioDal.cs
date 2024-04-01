@@ -25,5 +25,16 @@ namespace sistemaVentas.DAL
                                                          
             conexion.Ejecutar(consulta);
         }
+        public DataTable UsuarioExamenDal()
+        {
+            string consulta = "SELECT (PERSONA.NOMBRE+' '+PERSONA.APELLIDO) AS NOMBREVENDEDOR,COUNT(DETALLEVENTA.IDPRODUCTO) AS CANTIDADPRODUCTOSVENDIDOS " +
+                "FROM VENTA " +
+                "INNER JOIN USUARIO ON VENTA.IDVENDEDOR = USUARIO.IDUSUARIO " +
+                "INNER JOIN PERSONA ON USUARIO.IDPERSONA = PERSONA.IDPERSONA " +
+                "INNER JOIN DETALLEVENTA ON VENTA.IDVENTA = DETALLEVENTA.IDVENTA " +
+                "GROUP BY PERSONA.NOMBRE, PERSONA.APELLIDO";
+
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
     }
 }

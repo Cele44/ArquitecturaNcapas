@@ -32,6 +32,10 @@ namespace sistemaVentas.BSS
         {
             dal.EliminarProveedorDal(id);
         }
+        public DataTable ProveedorExamenBss()
+        {
+            return dal.ProveedorExamenDal();
+        }
     }
 }
 

@@ -32,6 +32,10 @@ namespace sistemaVentas.BSS
         {
             dal.EliminarMarcaDal(id);
         }
+        public DataTable MarcaExamenBss()
+        {
+            return dal.MarcaExamenDal();
+        }
 
     }
 }

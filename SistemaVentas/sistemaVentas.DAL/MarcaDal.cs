@@ -48,5 +48,17 @@ namespace sistemaVentas.DAL
             string consulta = "delete from marca where idmarca=" + id;
             conexion.Ejecutar(consulta);
         }
+
+        //examen
+        public DataTable MarcaExamenDal()
+        {
+            string consulta = "SELECT TOP 1 MARCA.NOMBRE , COUNT(DETALLEVENTA.IDPRODUCTO) AS TOTALVENTAS " +
+                "FROM DETALLEVENTA " +
+                "INNER JOIN PRODUCTO P ON DETALLEVENTA.IDPRODUCTO = P.IDPRODUCTO " +
+                "INNER JOIN MARCA  ON P.IDMARCA = MARCA.IDMARCA " +
+                "GROUP BY MARCA.NOMBRE " +
+                "ORDER BY TOTALVENTAS DESC";
+            return conexion.EjecutarDataTabla(consulta, "ffff");
+        }
     }
 }

@@ -21,5 +21,9 @@ namespace sistemaVentas.BSS
         {
             dal.InsertarUsuarioDal(usuario);
         }
+        public DataTable UsuarioExamenBss()
+        {
+            return dal.UsuarioExamenDal();
+        }
     }
 }
